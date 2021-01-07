@@ -73,7 +73,7 @@ func handleQuery(filter string, rw http.ResponseWriter, r *http.Request) {
 		}
 	}
 	url := &url.URL{
-		Scheme:   "http",
+		Scheme:   "https",
 		Host:     *upstream,
 		Path:     fmt.Sprintf("%s%s", *upstreamPrefixPath, r.URL.Path), //FIXME
 		RawQuery: params.Encode(),
